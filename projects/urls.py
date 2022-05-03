@@ -15,4 +15,6 @@ urlpatterns = [
     path('delete-project/<str:pk>/', views.deleteProject, name="delete-project"),
 
     path('portfolio/firststep/', views.firstStep, name="first-step"),
+
+    path('portfolio/secondstep/', views.secondStep, name="second-step"),
 ]

@@ -13,6 +13,10 @@ def firstStep(request):
     context = {}
     return render(request, 'projects/first_step.html', context)
 
+def secondStep(request):
+    context = {}
+    return render(request, 'projects/second_step.html', context)
+
 
 def projects(request):
     projects, search_query = searchProjects(request)
