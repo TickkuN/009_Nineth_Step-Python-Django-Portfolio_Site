@@ -9,6 +9,11 @@ from .forms import ProjectForm, ReviewForm
 from .utils import paginateProjects, searchProjects, paginateProjects
 
 
+def firstStep(request):
+    context = {}
+    return render(request, 'projects/first_step.html', context)
+
+
 def projects(request):
     projects, search_query = searchProjects(request)
     custom_range, projects = paginateProjects(request, projects, 6)
