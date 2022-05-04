@@ -15,6 +15,9 @@ def firstStep(request):
 def secondStep(request):
     return render(request, 'projects/second_step.html')
 
+def thirdStep(request):
+    return render(request, 'projects/third_step.html')
+
 
 def projects(request):
     projects, search_query = searchProjects(request)

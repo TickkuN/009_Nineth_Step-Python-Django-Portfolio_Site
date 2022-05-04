@@ -17,4 +17,6 @@ urlpatterns = [
     path('portfolio/firststep/', views.firstStep, name="first-step"),
 
     path('portfolio/secondstep/', views.secondStep, name="second-step"),
+
+    path('portfolio/thirdstep/', views.thirdStep, name="third-step"),
 ]
