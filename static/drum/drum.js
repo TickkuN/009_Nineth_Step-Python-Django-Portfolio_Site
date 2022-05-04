@@ -21,9 +21,16 @@ for (let i = 0; i < numberOfDreamButtons; i++){
 
 document.addEventListener("keypress", function(event) {
 
-    makeSound(event.key);
+    const canPressKeys = ["w", "a", "s", "d", "j", "k", "l"];
+
+    if (canPressKeys.includes(event.key)){
+
+        makeSound(event.key);
     
-    buttonAnimation(event.key);
+        buttonAnimation(event.key);
+
+    }
+
 });
 
 function makeSound(key) {
@@ -72,13 +79,15 @@ function makeSound(key) {
 }
 
 function buttonAnimation(currentKey) {
+    
+        console.log("ok");
 
-    let activeButton = document.querySelector("." + currentKey);
+        let activeButton = document.querySelector("." + currentKey);
 
-    activeButton.classList.add("pressed");
+         activeButton.classList.add("pressed");
 
-    setTimeout(function () {
-        activeButton.classList.remove("pressed");
-    }, 100);
+         setTimeout(function () {
+             activeButton.classList.remove("pressed");
+         }, 100);
 
 }
