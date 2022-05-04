@@ -10,12 +10,10 @@ from .utils import paginateProjects, searchProjects, paginateProjects
 
 
 def firstStep(request):
-    context = {}
-    return render(request, 'projects/first_step.html', context)
+    return render(request, 'projects/first_step.html')
 
 def secondStep(request):
-    context = {}
-    return render(request, 'projects/second_step.html', context)
+    return render(request, 'projects/second_step.html')
 
 
 def projects(request):
